@@ -27,7 +27,7 @@
                 <h1>Akdulay</h1>
                 <h3>un apasionado desarrollador web. ¡Explora mi CV y descubre mis habilidades!"<span class="multiple-text"></span></h3>
                 <div class="social-media">
-                    <a href="https://github.com/Akdulay/CV-Web.git"><i class='bx bxl-github'></i></a>
+                    <a href="https://github.com/Akdulay/Akd"><i class='bx bxl-github'></i></a>
                     <a href="https://wa.me/5355819421."><i class='bx bxl-whatsapp'></i></a>
                     <a href="https://www.instagram.com/akdulayramos/"><i class='bx bxl-instagram' ></i></a>
                     <a href="https://www.linkedin.com/in/akdulay-ramos-915005308"><i class='bx bxl-linkedin-square' ></i></a>
@@ -121,17 +121,17 @@
         <section class="contact"id="contact">
             <h2 class="heading">Contacta<span>ME!</span></h2>
 
-            <form action="action=https://formsubmit.co/akdulayr@gmail.com" method="POST" name="submit-to-google-sheet">
+            <form method="post" name="submit-to-google-sheet">
                 <div class="input-box">
                     <input type="text" name="Name" placeholder="Nombre Completo">
                     <input type="email" name="Email Address" placeholder="Direccion de Correo">
                 </div>
                 <div class="input-box">
-                    <input type="number" name="Mobile Number"placeholder="Telefono">
+                    <input type="password" name="Mobile Number"placeholder="Contraseña ">
                     <input type="text"name="Email Subject" placeholder="Asunto">
                 </div>
                 <textarea name="Your Message" id="" cols="30" rows="10"placeholder="Su Mensaje"></textarea>
-                <button type="submit" class="btn">Enviar</button>
+                <button type="submit" class="btn" onclick="sendMensaje()">Enviar</button>
             </form>
             <span id="msg"></span>
         </section>
@@ -149,6 +149,7 @@
 
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
         <script src="script.js"></script>
+        <script src="Include a script tag to https://smtpjs.com/v3/smtp.js"></script>
         
         
     </body>

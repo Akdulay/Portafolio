@@ -45,15 +45,39 @@ ScrollReveal().reveal('.home-content h1,.about-img',{origin:'left'});
 ScrollReveal().reveal('.home-content p,.about-content',{origin:'right'});
 
 const typed = new Typed('.multiple-text',{
-    strings:['  Python','   Javascrip','    Back-End developer'],
+    strings:['  Python','   Javascript','    Back-End developer'],
     typeSpeed:100,
     backSpeed:100,
     backDelay:1000,
     loop:true
 });
 
-const form=document.getElementById('form');
-const enviar=document.querySelector('#contactForm button[type="submit"]');
-enviar.addEventListener('click',function(){
-    form.reset();
-});
+
+
+
+
+function sendMensaje() {
+    // Obtener los elementos por su atributo name
+    const nameCompleto = document.querySelector('input[name="Name"]').value;
+    const emailAdress = document.querySelector('input[name="Email Address"]').value;
+    const contraseña = document.querySelector('input[name="Mobile Number"]').value;
+    const asunto = document.querySelector('input[name="Email Subject"]').value;
+    const mensaje = document.querySelector('textarea[name="Your Message"]').value;
+    const correo='akdulayr@gmail.com'
+
+    Email.send({
+        Host : "smtp.gmail.com",
+        Username : nameCompleto,
+        Password : contraseña,
+        To : correo,
+        From : emailAdress,
+        Subject : asunto,
+        Body : mensaje
+    }).then(
+        message =>{
+            alert(message);
+        document.forms['submit-to-google-sheet'].reset();
+        }
+    );
+
+}
