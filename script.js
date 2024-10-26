@@ -76,7 +76,11 @@ function sendMensaje() {
     }).then(
         message =>{
             alert(message);
-        document.forms['submit-to-google-sheet'].reset();
+            document.querySelector('input[name="Name"]').value='';
+            document.querySelector('input[name="Email Address"]').value='';
+            document.querySelector('input[name="Mobile Number"]').value='';
+            document.querySelector('input[name="Email Subject"]').value='';
+            document.querySelector('textarea[name="Your Message"]').value='';
         }
     );
 
