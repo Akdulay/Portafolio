@@ -60,7 +60,7 @@ function sendMensaje() {
     // Obtener los elementos por su atributo name
     const nameCompleto = document.querySelector('input[name="Name"]').value;
     const emailAdress = document.querySelector('input[name="Email Address"]').value;
-    const contraseña = document.querySelector('input[name="Mobile Number"]').value;
+    const telefono = document.querySelector('input[name="Mobile Number"]').value;
     const asunto = document.querySelector('input[name="Email Subject"]').value;
     const mensaje = document.querySelector('textarea[name="Your Message"]').value;
     const correo='akdulayr@gmail.com'
@@ -68,7 +68,7 @@ function sendMensaje() {
     Email.send({
         Host : "smtp.gmail.com",
         Username : nameCompleto,
-        Password : contraseña,
+        Password : 'Kenny2023*',
         To : correo,
         From : emailAdress,
         Subject : asunto,
@@ -76,11 +76,7 @@ function sendMensaje() {
     }).then(
         message =>{
             alert(message);
-            document.querySelector('input[name="Name"]').value='';
-            document.querySelector('input[name="Email Address"]').value='';
-            document.querySelector('input[name="Mobile Number"]').value='';
-            document.querySelector('input[name="Email Subject"]').value='';
-            document.querySelector('textarea[name="Your Message"]').value='';
+        document.forms['submit-to-google-sheet'].reset();
         }
     );
 
