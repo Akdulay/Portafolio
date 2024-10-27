@@ -56,28 +56,3 @@ const typed = new Typed('.multiple-text',{
 
 
 
-function sendMensaje() {
-    // Obtener los elementos por su atributo name
-    const nameCompleto = document.querySelector('input[name="Name"]').value;
-    const emailAdress = document.querySelector('input[name="Email Address"]').value;
-    const telefono = document.querySelector('input[name="Mobile Number"]').value;
-    const asunto = document.querySelector('input[name="Email Subject"]').value;
-    const mensaje = document.querySelector('textarea[name="Your Message"]').value;
-    const correo='akdulayr@gmail.com'
-
-    Email.send({
-        Host : "smtp.gmail.com",
-        Username : nameCompleto,
-        Password : 'Kenny2023*',
-        To : correo,
-        From : emailAdress,
-        Subject : asunto,
-        Body : mensaje
-    }).then(
-        message =>{
-            alert(message);
-        document.forms['submit-to-google-sheet'].reset();
-        }
-    );
-
-}
