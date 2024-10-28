@@ -54,5 +54,17 @@ const typed = new Typed('.multiple-text',{
 
 
 
+function clearFormFields() {
+    const textos = document.querySelectorAll("input");
+    const texto2 = document.querySelector("textarea");
 
+    textos.forEach(input => {
+        input.value = '';
+    });
 
+    texto2.value = '';
+
+    console.log("Campos vaciados");
+}
+
+document.addEventListener('DOMContentLoaded', clearFormFields);
