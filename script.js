@@ -64,7 +64,7 @@ function clearFormFields() {
 
     texto2.value = '';
 
-    console.log("Campos vaciados");
+    
 }
 
 document.addEventListener('DOMContentLoaded', clearFormFields);
